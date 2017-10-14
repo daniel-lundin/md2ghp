@@ -1,0 +1,35 @@
+{
+  "name": "md2ghp",
+  "version": "0.0.1",
+  "description": "Turn README.md to a pretty, seach-friendly gh-page",
+  "main": "index.js",
+  "keywords": [
+    "markdown",
+    "gh-pages"
+  ],
+  "author": "d-dog@d-dog.se",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "marked": "^0.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "kuta": "^1.0.6"
+  },
+  "repository": {
+    "url" : "https://github.com/daniel-lundin/md2ghp",
+    "email" : "d-dog@d-dog.se"
+  },
+  "bin": {
+    "md2ghp": "bin/cli.js"
+  },
+  "kuta": {
+    "files": [
+      "tests/**/*-tests.js"
+    ]
+  },
+  "scripts": {
+    "test": "kuta"
+  }
+}
