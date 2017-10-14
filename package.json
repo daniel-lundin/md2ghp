@@ -11,15 +11,16 @@
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^1.0.0",
-    "marked": "^0.3.6"
+    "marked": "^0.3.6",
+    "tmp": "0.0.33"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
     "kuta": "^1.0.6"
   },
   "repository": {
-    "url" : "https://github.com/daniel-lundin/md2ghp",
-    "email" : "d-dog@d-dog.se"
+    "url": "https://github.com/daniel-lundin/md2ghp",
+    "email": "d-dog@d-dog.se"
   },
   "bin": {
     "md2ghp": "bin/cli.js"
