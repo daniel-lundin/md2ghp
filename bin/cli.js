@@ -3,10 +3,10 @@
 const tmp = require('tmp');
 const fs = require('fs');
 const path = require('path');
-const md2html = require('../src');
+const md2html = require(path.join(__dirname, '../src'));
 
 const html = md2html();
-const css = fs.readFileSync('./assets/no-class.min.css');
+const css = fs.readFileSync(path.join(__dirname, './assets/no-class.min.css'));
 
 const tempDir = tmp.dirSync();
 const indexPath = path.join(tempDir.name, 'index.html');
