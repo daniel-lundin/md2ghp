@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Kuta - parallel test runner for node</title>
-    <meta name="description" content="Fast test runner for node">
-    <meta name="author" content="Daniel Lundin">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="no-class.min.css">
   </head>
