@@ -33,6 +33,7 @@
     ]
   },
   "scripts": {
-    "test": "kuta"
+    "test": "kuta",
+    "lint": "eslint ."
   }
 }
