@@ -3,6 +3,7 @@
 const tmp = require('tmp');
 const fs = require('fs');
 const path = require('path');
+const ghpages = require('gh-pages');
 const md2html = require(path.join(__dirname, '../src'));
 
 const html = md2html();
@@ -15,4 +16,8 @@ fs.writeFileSync(indexPath, html);
 fs.writeFileSync(cssPath, css);
 
 
-console.log('indexPath', indexPath);
+ghpages.publish(tempDir.name, (err) => {
+  if (err) {
+    console.log('Error publishing gh-page'); // eslint-disable-line
+  }
+});
