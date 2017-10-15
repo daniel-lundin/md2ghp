@@ -19,7 +19,10 @@ function render(data) {
   const template = fs.readFileSync(TEMPLATE_PATH).toString();
   return template
     .replace('${gh-corner}', renderGhCorner(data.repository))
-    .replace('${contents}', data.readme);
+    .replace('${contents}', data.readme)
+    .replace('${title}', data.name)
+    .replace('${description}', data.description)
+    .replace('${author}', data.author);
 }
 
 module.exports = {

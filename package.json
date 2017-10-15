@@ -1,7 +1,7 @@
 {
   "name": "md2ghp",
   "version": "0.0.1",
-  "description": "Turn README.md to a pretty, seach-friendly gh-page",
+  "description": "Turn README.md to a pretty, search-friendly gh-page",
   "main": "index.js",
   "keywords": [
     "markdown",
