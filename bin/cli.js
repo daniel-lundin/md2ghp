@@ -18,6 +18,6 @@ fs.writeFileSync(cssPath, css);
 
 ghpages.publish(tempDir.name, (err) => {
   if (err) {
-    console.log('Error publishing gh-page'); // eslint-disable-line
+    console.log('Error publishing gh-page', err); // eslint-disable-line
   }
 });
