@@ -21,5 +21,8 @@ fs.writeFileSync(cssPath, css);
 ghpages.publish(tempDir.name, (err) => {
   if (err) {
     console.log('Error publishing gh-page', err); // eslint-disable-line
+    process.exit(1);
   }
+
+  console.log('All ok!'); // eslint-disable-line
 });
