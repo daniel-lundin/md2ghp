@@ -10,7 +10,7 @@ Works well as a prepublish hook.
 
 ## Standing on the shoulder's of others
 
-This is basically glue code between [gh-pages](https://github.com/tschaub/gh-pages), [marked](http://github.com/chjj/marked) and (no-class)[https://github.com/davidpaulsson/no-class]
+This is basically glue code between [gh-pages](https://github.com/tschaub/gh-pages), [marked](http://github.com/chjj/marked) and [no-class](https://github.com/davidpaulsson/no-class)
 
 Check them out!
 
