@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 const tmp = require('tmp');
@@ -7,7 +9,7 @@ const ghpages = require('gh-pages');
 const md2html = require(path.join(__dirname, '../src'));
 
 const html = md2html();
-const css = fs.readFileSync(path.join(__dirname, './assets/no-class.min.css'));
+const css = fs.readFileSync(path.join(__dirname, '../assets/no-class.min.css'));
 
 const tempDir = tmp.dirSync();
 const indexPath = path.join(tempDir.name, 'index.html');

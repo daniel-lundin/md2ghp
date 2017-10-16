@@ -35,6 +35,7 @@
   "scripts": {
     "test": "kuta",
     "lint": "eslint .",
+    "gh-page": "bin/cli.js",
     "prepublish": "bin/cli.js"
   }
 }
