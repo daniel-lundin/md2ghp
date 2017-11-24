@@ -20,14 +20,15 @@ function extractTOC(parsedMD) {
   return `<ul>${tocItems.join('')}</ul>`;
 }
 
-function createTOCRenderer(mdContent) {
+function createRenderer(mdContent) {
   const parsedMD = marked.lexer(mdContent.toString());
   const TOC = extractTOC(parsedMD);
 
-  const TOCInjectRenderer = new marked.Renderer();
+  const renderer = new marked.Renderer();
 
   let h2Seen = false;
-  TOCInjectRenderer.heading = function(text, level) {
+  const images = [];
+  renderer.heading = function(text, level) {
     if (level === 2 && !h2Seen) {
       h2Seen = true;
       return `${TOC}${heading(text, level)}`;
@@ -35,12 +36,18 @@ function createTOCRenderer(mdContent) {
     return heading(text, level);
   };
 
-  return TOCInjectRenderer;
+  renderer.image = function(ref, title, text) {
+    images.push({ ref, title, text });
+    return `<img src="${ref}" alt=${text}" title="${title}" style="max-width: 100%;">`;
+  };
+
+  return { images, renderer };
 }
 
 function markdownToHTML(markdownContent) {
-  const body = marked(markdownContent, { renderer: createTOCRenderer(markdownContent) });
-  return body;
+  const { images, renderer } = createRenderer(markdownContent);
+  const body = marked(markdownContent, { renderer });
+  return { images, body };
 }
 
 module.exports = {

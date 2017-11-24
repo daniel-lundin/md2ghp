@@ -2,17 +2,14 @@
 
 const { markdownToHTML } = require('./markdown-parser');
 const templating = require('./templating');
-const {
-  getReadmeContent,
-  getPackageContent
-} = require('./content-fetch.js');
+const contentFetch = require('./content-fetch.js');
 
 module.exports = function() {
-  const readme = getReadmeContent();
-  const packageData = getPackageContent();
+  const readme = contentFetch.getReadmeContent();
+  const packageData = contentFetch.getPackageContent();
 
-  const readmeAsHTML = markdownToHTML(readme);
-  const templateData = Object.assign({}, { readme: readmeAsHTML }, packageData);
+  const { images, body: readmeAsHTML } = markdownToHTML(readme);
+  const templateData = Object.assign({}, { readme: readmeAsHTML }, packageData, { headerImage: images[0] });
 
   return templating.render(templateData);
 };

@@ -22,7 +22,8 @@ function render(data) {
     .replace('${contents}', data.readme)
     .replace('${title}', data.name)
     .replace('${description}', data.description)
-    .replace('${author}', data.author);
+    .replace('${author}', data.author)
+    .replace('${sharingImage}', data.headerImage ? data.headerImage.ref : '');
 }
 
 module.exports = {
