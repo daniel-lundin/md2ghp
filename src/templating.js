@@ -20,8 +20,8 @@ function render(data) {
   return template
     .replace('${gh-corner}', renderGhCorner(data.repository))
     .replace('${contents}', data.readme)
-    .replace('${title}', data.name)
-    .replace('${description}', data.description)
+    .replace(/\$\{title\}/g, data.name)
+    .replace(/\$\{description\}/g, data.description)
     .replace('${author}', data.author)
     .replace('${sharingImage}', data.headerImage ? data.headerImage.ref : '');
 }
