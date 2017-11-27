@@ -1,6 +1,6 @@
 {
   "name": "md2ghp",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Turn README.md to a pretty, search-friendly gh-page",
   "main": "index.js",
   "keywords": [

@@ -9,7 +9,7 @@
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:image" content="${sharingImage}" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="stylesheet" href="no-class.min.css">
   </head>
